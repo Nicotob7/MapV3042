@@ -19,7 +19,7 @@
         android:gravity="center"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/eduser"
+        android:id="@+id/txtUsuario"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtUsuario"
+            android:id="@+id/eduser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingrese Correo"
@@ -37,18 +37,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edpass"
+        android:id="@+id/txtPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/eduser"
+        android:layout_below="@+id/txtUsuario"
         android:layout_marginTop="10dp"
         android:textColorHint="@color/white"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtPassword"
+            android:id="@+id/edpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENTRAR"
-        android:layout_below="@+id/edpass"
+        android:layout_below="@+id/txtPassword"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/design_default_color_secondary_variant" />
     <TextView

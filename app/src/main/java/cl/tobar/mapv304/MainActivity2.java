@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import OpenHelper1.SQLite_OpenHelper;
+
 public class MainActivity2  extends AppCompatActivity {
 
     Button btnGrabarUsu;

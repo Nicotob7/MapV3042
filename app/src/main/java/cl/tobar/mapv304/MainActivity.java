@@ -1,17 +1,18 @@
 package cl.tobar.mapv304;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import OpenHelper1.SQLite_OpenHelper;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         tvRegistrese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(),MapsActivity.class);
+                Intent i= new Intent(getApplicationContext(),MainActivity2.class);
                 startActivity(i);
 
             }
@@ -41,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar= findViewById(R.id.btnIngresar);
 
         btnIngresar.setOnClickListener(view -> {
-            EditText txtusu= findViewById(R.id.txtUsuario);
-            EditText txtxpas= findViewById(R.id.txtPassword);
+            TextInputLayout txtusu= findViewById(R.id.txtUsuario);
+            TextInputLayout txtxpas= findViewById(R.id.txtPassword);
 
             try {
                 Cursor cursor=helper.ConsultarUsuPas
-                        (txtusu.getText().toString(),txtxpas.getText().toString());
+                        (txtusu.getEditText().getText().toString(),txtxpas.getEditText().getText().toString());
 
                 if(cursor.getCount()>0){
                     Intent i= new Intent(getApplicationContext(),MapsActivity.class);
@@ -55,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Usuario y/o Pass Incorrectos",
                             Toast.LENGTH_LONG).show();
                 }
-                txtusu.setText("");
-                txtxpas.setText("");
+                txtusu.getEditText().setText("");
+                txtxpas.getEditText().setText("");
                 txtusu.findFocus();
 
 
