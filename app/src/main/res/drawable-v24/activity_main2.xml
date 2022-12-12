@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="379dp"
+        android:layout_height="698dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Registro de Usuario"
+            android:textColor="@color/white"
+            android:textSize="35dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNomUsu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:hint="Ingresar Usuario" />
+
+        <EditText
+            android:id="@+id/txtCorUsu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:hint="Ingresar Correo"  />
+
+        <EditText
+            android:id="@+id/txtPasUsu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Ingresar Contraseña" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarUsu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edpass"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:text="Registrar Usuario" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

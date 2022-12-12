@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sport Maps"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/eduser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtitle"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Correo"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edpass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eduser"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/white"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTRAR"
+        android:layout_below="@+id/edpass"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant" />
+    <TextView
+        android:id="@+id/tvRegistrese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta o restablecer"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnIngresar"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="401dp"
+        android:layout_height="256dp"
+        android:layout_below="@+id/tvRegistrese"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="77dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+
+    </LinearLayout>
+
+</RelativeLayout>
