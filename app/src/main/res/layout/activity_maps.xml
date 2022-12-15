@@ -21,10 +21,10 @@
         android:gravity="center"/>
 
     <Button
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnMap"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:text="E"
+        android:text="+"
         android:layout_below="@+id/tvtitle"
         android:layout_marginTop="10dp"
         android:padding="5dp"

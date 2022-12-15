@@ -1,11 +1,14 @@
 package cl.tobar.mapv304
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 
 import androidx.core.app.ActivityCompat
 
@@ -32,6 +35,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         fusedLocation = LocationServices.getFusedLocationProviderClient(this)
+
+        val  btnMap = findViewById<Button>(R.id.btnMap)
+
+        btnMap.setOnClickListener{
+            val Intent = Intent(this,MainActivity3::class.java)
+            startActivity(Intent)
+        }
     }
 
 
@@ -124,6 +134,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         return textoDireccion
     }
+
+
 
 
 }
