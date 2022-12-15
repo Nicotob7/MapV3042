@@ -16,7 +16,7 @@
         android:text="Sport Maps"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:gravity="center"/>
+        android:gravity="centerr"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtUsuario"
