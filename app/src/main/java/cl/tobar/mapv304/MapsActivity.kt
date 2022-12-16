@@ -1,14 +1,15 @@
 package cl.tobar.mapv304
 
 import android.Manifest
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 
 import androidx.core.app.ActivityCompat
 
@@ -49,6 +50,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) { //Agrega un marcador
         mMap = googleMap
 
+
+        val success = mMap.setMapStyle(
+            MapStyleOptions.loadRawResourceStyle(
+                this, R.raw.map
+            )
+        )
+        if (!success) {
+            Log.e(TAG, "Style parsing failed.")
+        }
+
         if (ActivityCompat.checkSelfPermission( //Si el permiso de ubicacion no se acepto
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -68,14 +79,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.uiSettings.isCompassEnabled = true     //Activacion de el compas
         mMap.uiSettings.isMapToolbarEnabled = false //Desactivaciones de redireccion a maps
         mMap.mapType = GoogleMap.MAP_TYPE_NORMAL //Tipo de mapa
-
-
-
-
-
-
-
-
 
 
 
